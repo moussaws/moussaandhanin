@@ -4,8 +4,8 @@
 window.CONFIG = {
   // --- Supabase (paste from supabase.com → Project Settings → API) ---
   // Leave both empty to run in demo mode (answers saved only in the visitor's browser).
-  SUPABASE_URL: "",       // e.g. "https://abcdefgh.supabase.co"
-  SUPABASE_ANON_KEY: "",  // the long "anon / public" key — safe to publish
+  SUPABASE_URL: "https://tzdzpgdimosnbnobqelu.supabase.co",
+  SUPABASE_ANON_KEY: "sb_publishable_0mYxfDh9qSY3A9yImVYPNg_cXkjjped", // publishable key, safe to publish
 
   // --- Event details (shown on the ticket) ---
   EVENT: {

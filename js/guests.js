@@ -1,4 +1,4 @@
-/* Secret guest list — needs ?key=<secret> in the URL */
+/* Secret guest list : needs ?key=<secret> in the URL */
 (function () {
   const cfg = window.CONFIG;
   const $ = (id) => document.getElementById(id);
@@ -15,7 +15,7 @@
 
   async function load() {
     if (!cfg.SUPABASE_URL || !cfg.SUPABASE_ANON_KEY) {
-      msg.textContent = "Supabase isn't connected yet — paste your keys into js/config.js first.";
+      msg.textContent = "Supabase isn't connected yet. Paste your keys into js/config.js first.";
       return;
     }
     if (!key) {
@@ -44,7 +44,7 @@
       $("totals").hidden = false;
 
       if (!rows.length) {
-        msg.textContent = "No answers yet — send the link around! 📨";
+        msg.textContent = "No answers yet. Send the link around! 📨";
         return;
       }
       const fmt = new Intl.DateTimeFormat(undefined, { dateStyle: "medium", timeStyle: "short" });

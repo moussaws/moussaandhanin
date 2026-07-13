@@ -1,4 +1,4 @@
-/* Moussa & Hanin — invitation logic */
+/* Moussa & Hanin : invitation logic */
 (function () {
   const cfg = window.CONFIG;
   const $ = (id) => document.getElementById(id);
@@ -120,8 +120,8 @@
 
   const MESSAGES = {
     yes:      { emoji: "🎉", msg: (n) => `You're on the list, ${n}! See you there!` },
-    plus_one: { emoji: "💃", msg: (n) => `${n} +1 — the more, the merrier! Two seats saved.` },
-    maybe:    { emoji: "🤔", msg: (n) => `No pressure, ${n} — the door (and the cake) will be waiting.` },
+    plus_one: { emoji: "💃", msg: (n) => `${n} +1! The more, the merrier. Two seats saved.` },
+    maybe:    { emoji: "🤔", msg: (n) => `No pressure, ${n}. The door (and the cake) will be waiting.` },
     no:       { emoji: "🥺", msg: (n) => `We'll miss you, ${n}. You owe us a dance some other day!` },
   };
   const CARD_COLORS = {
@@ -183,7 +183,7 @@
       showDone(name, status, true);
       refreshCount();
     } catch (err) {
-      errBox.textContent = "Hmm, that didn't go through — check your internet and try again?";
+      errBox.textContent = "Hmm, that didn't go through. Check your internet and try again?";
       errBox.hidden = false;
     } finally {
       btn.classList.remove("sending");
