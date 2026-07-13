@@ -24,6 +24,6 @@ window.CONFIG = {
   // "https://www.icloud.com/sharedalbum/#B0Abc...") to show the photo section.
   // Empty = the section stays hidden.
   PHOTOS: {
-    albumUrl: "",
+    albumUrl: "https://www.icloud.com/sharedalbum/#B24532ODWr0B3YE",
   },
 };
