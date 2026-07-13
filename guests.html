@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Guest list — Moussa &amp; Hanin</title>
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💌</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Shrikhand&family=Nunito:wght@400;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="guests-wrap">
+    <h1 class="guests-title">Who's coming? 💌</h1>
+    <p class="guests-sub">For the happy couple's eyes only.</p>
+
+    <div class="totals" id="totals" hidden>
+      <div class="total-chip headcount"><b id="tHead">0</b>headcount</div>
+      <div class="total-chip"><b id="tYes">0</b>🎉 coming</div>
+      <div class="total-chip"><b id="tPlus">0</b>💃 with +1</div>
+      <div class="total-chip"><b id="tMaybe">0</b>🤔 not sure</div>
+      <div class="total-chip"><b id="tNo">0</b>😢 can't</div>
+    </div>
+
+    <table class="guest-table" id="guestTable" hidden>
+      <thead><tr><th>Name</th><th>Answer</th><th>Last updated</th></tr></thead>
+      <tbody id="guestRows"></tbody>
+    </table>
+
+    <p class="guests-msg" id="guestsMsg">Loading…</p>
+  </div>
+
+  <script src="js/config.js"></script>
+  <script src="js/guests.js"></script>
+</body>
+</html>

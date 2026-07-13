@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Moussa &amp; Hanin — She said YES!</title>
+  <meta name="description" content="Moussa & Hanin are getting engaged — join the celebration and tell us if you're coming!">
+  <meta property="og:title" content="Moussa & Hanin — She said YES! 💍">
+  <meta property="og:description" content="You're invited to our engagement celebration. Tap to open your invitation.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💍</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Shrikhand&family=Nunito:ital,wght@0,400;0,700;0,800;0,900;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ============ INTRO: the ring box ============ -->
+  <div class="intro" id="intro">
+    <div class="intro-stars" aria-hidden="true"></div>
+    <p class="intro-eyebrow">psst… something happened</p>
+    <button class="ringbox" id="ringbox" aria-label="Open the ring box to see your invitation">
+      <span class="ringbox-glow" aria-hidden="true"></span>
+      <span class="ringbox-ring" aria-hidden="true">💍</span>
+      <span class="ringbox-lid" aria-hidden="true"><span class="ringbox-ribbon-v"></span></span>
+      <span class="ringbox-base" aria-hidden="true"><span class="ringbox-ribbon-h"></span></span>
+      <span class="sparkle s1" aria-hidden="true">✨</span>
+      <span class="sparkle s2" aria-hidden="true">✨</span>
+      <span class="sparkle s3" aria-hidden="true">✨</span>
+    </button>
+    <p class="intro-hint" id="introHint">tap the box</p>
+  </div>
+
+  <!-- ============ THE PARTY ============ -->
+  <main class="party" id="party" hidden>
+
+    <svg class="festoon" viewBox="0 0 1200 110" preserveAspectRatio="none" aria-hidden="true">
+      <path d="M0,20 Q300,105 600,45 T1200,25" fill="none" stroke="#1F0F3D" stroke-width="3"/>
+      <g id="bulbs"></g>
+    </svg>
+
+    <!-- Hero -->
+    <header class="hero">
+      <p class="eyebrow">A very important announcement</p>
+      <h1 class="hero-title">
+        <span class="line line-1">He asked.</span>
+        <span class="line line-2">She said <em>YES!</em></span>
+      </h1>
+      <p class="hero-sub"><strong>Moussa &amp; Hanin</strong> are getting engaged — and the party isn't a party without you.</p>
+      <a class="btn btn-gold" href="#rsvp">Tell us you're coming 🎉</a>
+    </header>
+
+    <!-- Ticket -->
+    <section class="ticket-wrap" aria-labelledby="detailsTitle">
+      <h2 class="section-title" id="detailsTitle">Your ticket to the celebration</h2>
+      <div class="ticket">
+        <div class="ticket-main">
+          <p class="ticket-label">The engagement of</p>
+          <p class="ticket-names">Moussa <span class="amp">&amp;</span> Hanin</p>
+          <dl class="ticket-facts">
+            <div><dt>Date</dt><dd id="factDate">To be announced ✨</dd></div>
+            <div><dt>Time</dt><dd id="factTime">To be announced</dd></div>
+            <div><dt>Where</dt><dd id="factVenue">To be announced</dd></div>
+            <div><dt>Dress code</dt><dd id="factDress">Bring your best smile</dd></div>
+          </dl>
+        </div>
+        <div class="ticket-stub" aria-hidden="true">
+          <p>ADMIT&nbsp;ONE</p>
+          <p class="stub-small">(+1 warmly welcome)</p>
+          <p class="stub-no">№ 001922</p>
+        </div>
+      </div>
+      <div class="countdown" id="countdown" hidden>
+        <p class="countdown-label">The countdown is ON</p>
+        <div class="countdown-tiles">
+          <div class="tile"><span id="cdD">–</span><small>days</small></div>
+          <div class="tile"><span id="cdH">–</span><small>hours</small></div>
+          <div class="tile"><span id="cdM">–</span><small>mins</small></div>
+          <div class="tile"><span id="cdS">–</span><small>secs</small></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Story -->
+    <section class="story" aria-label="Our story so far">
+      <h2 class="section-title">The story so far</h2>
+      <ol class="story-strip">
+        <li class="story-card sc-1"><span class="story-emoji">👀</span><p>We met</p></li>
+        <li class="story-arrow" aria-hidden="true">→</li>
+        <li class="story-card sc-2"><span class="story-emoji">❤️</span><p>We fell in love</p></li>
+        <li class="story-arrow" aria-hidden="true">→</li>
+        <li class="story-card sc-3"><span class="story-emoji">💍</span><p>He asked <small>(she said yes, obviously)</small></p></li>
+      </ol>
+    </section>
+
+    <!-- RSVP -->
+    <section class="rsvp" id="rsvp" aria-labelledby="rsvpTitle">
+      <h2 class="section-title" id="rsvpTitle">So… will we see you there?</h2>
+      <p class="rsvp-count" id="rsvpCount" hidden></p>
+
+      <div class="rsvp-form" id="rsvpForm">
+        <label class="name-label" for="guestName">First things first — who are you?</label>
+        <input class="name-input" id="guestName" type="text" autocomplete="name"
+               maxlength="60" placeholder="Your name (so we save you a seat)">
+        <p class="name-hint" id="nameHint" role="status"></p>
+
+        <div class="choices" id="choices">
+          <button class="choice ch-yes"   data-status="yes"      type="button">
+            <span class="choice-emoji">🎉</span><span class="choice-title">Wouldn't miss it!</span><span class="choice-sub">count me in</span></button>
+          <button class="choice ch-plus"  data-status="plus_one" type="button">
+            <span class="choice-emoji">💃</span><span class="choice-title">Coming with a +1!</span><span class="choice-sub">we party in pairs</span></button>
+          <button class="choice ch-maybe" data-status="maybe"    type="button">
+            <span class="choice-emoji">🤔</span><span class="choice-title">Hmm, let me check</span><span class="choice-sub">pending negotiations</span></button>
+          <button class="choice ch-no"    data-status="no"       type="button">
+            <span class="choice-emoji">😢</span><span class="choice-title">Sadly can't make it</span><span class="choice-sub">we'll miss you</span></button>
+        </div>
+      </div>
+
+      <div class="rsvp-done" id="rsvpDone" hidden>
+        <p class="done-emoji" id="doneEmoji">🎉</p>
+        <p class="done-msg" id="doneMsg"></p>
+        <button class="btn btn-ghost" id="changeMind" type="button">Changed your mind? Pick again</button>
+      </div>
+      <p class="rsvp-error" id="rsvpError" role="alert" hidden></p>
+    </section>
+
+    <footer class="footer">
+      <p>Made with ❤️ (and far too much confetti) by Moussa, for Hanin.</p>
+      <p class="footer-domain">moussaandhanin.com</p>
+    </footer>
+  </main>
+
+  <canvas id="confettiCanvas" aria-hidden="true"></canvas>
+
+  <script src="js/config.js"></script>
+  <script src="js/confetti.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
