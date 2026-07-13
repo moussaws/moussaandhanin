@@ -474,6 +474,124 @@ h1, h2, .ticket-names { font-family: "Shrikhand", "Nunito", cursive; font-weight
 .photos-note { margin-top: 1.3rem; font-weight: 700; font-size: .85rem; color: #6b5e88; }
 
 /* ============================================================
+   THE GREAT PET-OFF
+   ============================================================ */
+.petoff { text-align: center; }
+.petoff-lead {
+  max-width: 32em; margin: -0.8rem auto 2.2rem;
+  font-weight: 700; color: #d9cdf0;
+}
+
+.petoff-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.2rem;
+  max-width: 640px;
+  margin: 0 auto 1.8rem;
+}
+
+.cat-card {
+  position: relative;
+  background: var(--cream); color: var(--ink);
+  border: 3px solid var(--ink); border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 1.4rem 1rem 1.3rem;
+}
+.card-pistachio { border-top: 10px solid var(--mint); }
+.card-leo       { border-top: 10px solid var(--gold); }
+
+.crown {
+  position: absolute; top: -18px; left: 50%;
+  transform: translateX(-50%) rotate(-12deg);
+  font-size: 1.8rem;
+  filter: drop-shadow(0 3px 0 rgba(31,15,61,.3));
+  animation: crownbob 1.8s ease-in-out infinite;
+}
+@keyframes crownbob {
+  0%,100% { transform: translateX(-50%) rotate(-12deg) translateY(0); }
+  50% { transform: translateX(-50%) rotate(-8deg) translateY(-4px); }
+}
+
+.cat-btn {
+  background: none; border: none; cursor: pointer;
+  padding: 0; width: 100%;
+  -webkit-tap-highlight-color: transparent;
+  border-radius: 16px;
+}
+.cat-btn:focus-visible { outline: 4px dashed var(--night-2); outline-offset: 4px; }
+.cat-btn:hover .cat-svg { transform: scale(1.04) rotate(-1deg); }
+.cat-btn:active .cat-svg { transform: scale(.97); }
+
+.cat-svg {
+  width: 100%; max-width: 200px;
+  display: block; margin: 0 auto;
+  transition: transform .18s ease;
+}
+
+/* animatable cat parts */
+.cat-svg .ear, .cat-svg .tail, .cat-svg .head { transform-box: fill-box; }
+.cat-svg .ear-l { transform-origin: 80% 95%; }
+.cat-svg .ear-r { transform-origin: 20% 95%; }
+.cat-svg .tail  { transform-origin: 30% 90%; animation: tailsway 4s ease-in-out infinite; }
+@keyframes tailsway { 0%,100% { transform: rotate(0); } 50% { transform: rotate(4deg); } }
+
+.cat-svg .eyes-happy, .cat-svg .tongue, .cat-svg .blush { opacity: 0; transition: opacity .12s ease; }
+
+.cat-btn.petting .cat-svg { animation: catwiggle .55s ease; }
+.cat-btn.petting .ear-l { animation: earwigL .55s ease; }
+.cat-btn.petting .ear-r { animation: earwigR .55s ease; }
+.cat-btn.petting .eyes-open { opacity: 0; }
+.cat-btn.petting .eyes-happy, .cat-btn.petting .tongue, .cat-btn.petting .blush { opacity: 1; }
+@keyframes catwiggle {
+  0%,100% { transform: rotate(0) scale(1); }
+  25% { transform: rotate(-3deg) scale(1.05); }
+  60% { transform: rotate(2.5deg) scale(1.03); }
+}
+@keyframes earwigL { 30% { transform: rotate(-14deg); } 65% { transform: rotate(6deg); } }
+@keyframes earwigR { 30% { transform: rotate(14deg); } 65% { transform: rotate(-6deg); } }
+
+/* floating +1 */
+.pet-plus {
+  position: absolute; pointer-events: none;
+  font-weight: 900; font-size: 1.3rem; color: var(--coral);
+  text-shadow: 1px 2px 0 rgba(31,15,61,.25);
+  animation: floatup .8s ease-out forwards;
+  z-index: 5;
+}
+@keyframes floatup {
+  from { opacity: 1; transform: translateY(0) scale(1); }
+  to   { opacity: 0; transform: translateY(-46px) scale(1.4); }
+}
+
+.cat-name { font-family: "Shrikhand", cursive; font-size: 1.4rem; color: var(--night); margin-top: .4rem; }
+.cat-owner { font-weight: 700; font-size: .82rem; color: #8a7bab; margin-bottom: .6rem; }
+.pet-count {
+  display: inline-block;
+  padding: .3em 1em;
+  background: var(--ink); color: var(--gold);
+  border-radius: 999px;
+  font-weight: 900; font-size: .95rem;
+  font-variant-numeric: tabular-nums;
+}
+
+/* tug of war bar */
+.tugbar {
+  display: flex; overflow: hidden;
+  max-width: 520px; height: 20px;
+  margin: 0 auto .8rem;
+  border: 3px solid var(--ink); border-radius: 999px;
+  background: var(--ink);
+}
+.tugbar span { transition: width .5s cubic-bezier(.34,1.2,.64,1); }
+#tugP { background: var(--mint); width: 50%; border-right: 3px solid var(--ink); }
+#tugL { background: var(--gold); width: 50%; }
+.tug-caption { font-weight: 800; color: var(--cream); font-size: .98rem; }
+
+@media (max-width: 560px) {
+  .petoff-grid { grid-template-columns: 1fr; max-width: 320px; }
+}
+
+/* ============================================================
    FOOTER
    ============================================================ */
 .footer {

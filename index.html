@@ -11,7 +11,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Shrikhand&family=Nunito:ital,wght@0,400;0,700;0,800;0,900;1,400&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css?v=5">
+  <link rel="stylesheet" href="css/style.css?v=6">
 </head>
 <body>
 
@@ -135,6 +135,190 @@
       </div>
     </section>
 
+    <!-- The Great Pet-Off: Pistachio vs Leo -->
+    <section class="petoff" id="petoff" aria-labelledby="petoffTitle">
+      <h2 class="section-title" id="petoffTitle">Meet the fur family 🐾</h2>
+      <p class="petoff-lead">The real hosts of this engagement outing. Tap them to send some love. Yes, they are keeping score.</p>
+
+      <div class="petoff-grid">
+
+        <!-- ============ PISTACHIO (Moussa's brown tabby) ============ -->
+        <div class="cat-card card-pistachio">
+          <span class="crown" id="crownPistachio" hidden>👑</span>
+          <button class="cat-btn" id="petPistachio" type="button" aria-label="Pet Pistachio">
+            <svg class="cat-svg" viewBox="0 0 240 225" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <defs>
+                <radialGradient id="pisHead" cx="50%" cy="38%" r="75%">
+                  <stop offset="0%" stop-color="#C9AE85"/><stop offset="60%" stop-color="#B0916A"/><stop offset="100%" stop-color="#93765456"/>
+                </radialGradient>
+                <linearGradient id="pisBody" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0%" stop-color="#B3946D"/><stop offset="100%" stop-color="#8F7355"/>
+                </linearGradient>
+                <radialGradient id="pisEye" cx="45%" cy="35%" r="70%">
+                  <stop offset="0%" stop-color="#E9C063"/><stop offset="70%" stop-color="#C9962F"/><stop offset="100%" stop-color="#8A6414"/>
+                </radialGradient>
+              </defs>
+              <!-- tail: striped plume curling front right -->
+              <g class="tail">
+                <path d="M186,220 C224,204 236,158 214,132 C202,118 184,124 186,138 C188,151 204,156 202,172 C200,190 182,202 164,208 Z" fill="#9C7E5D"/>
+                <path d="M214,138 C220,146 221,155 218,163 L204,156 C208,149 210,143 208,137 Z" fill="#6B533B"/>
+                <path d="M215,172 C212,181 206,189 199,194 L189,182 C196,178 203,172 206,166 Z" fill="#6B533B"/>
+              </g>
+              <!-- body -->
+              <path d="M34,225 C33,172 62,142 120,142 C178,142 207,172 206,225 Z" fill="url(#pisBody)"/>
+              <path d="M52,196 C60,186 70,180 80,177 L74,196 Z" fill="#6B533B" opacity=".55"/>
+              <path d="M188,196 C180,186 170,180 160,177 L166,196 Z" fill="#6B533B" opacity=".55"/>
+              <!-- white chest ruff -->
+              <path d="M120,150 C102,150 88,162 86,180 L92,176 L96,192 L104,184 L110,200 L120,190 L130,200 L136,184 L144,192 L148,176 L154,180 C152,162 138,150 120,150 Z" fill="#F2EADC"/>
+              <!-- head -->
+              <g class="head">
+                <!-- ears -->
+                <g class="ear ear-l">
+                  <path d="M64,74 C52,52 48,26 56,12 C58,8 63,8 66,12 L98,52 Z" fill="#8F7355"/>
+                  <path d="M66,60 C60,46 58,32 62,22 L86,52 Z" fill="#E5AFB6"/>
+                  <path d="M58,30 L52,20 M64,26 L60,14" stroke="#F2EADC" stroke-width="2.5" stroke-linecap="round"/>
+                </g>
+                <g class="ear ear-r">
+                  <path d="M176,74 C188,52 192,26 184,12 C182,8 177,8 174,12 L142,52 Z" fill="#8F7355"/>
+                  <path d="M174,60 C180,46 182,32 178,22 L154,52 Z" fill="#E5AFB6"/>
+                  <path d="M182,30 L188,20 M176,26 L180,14" stroke="#F2EADC" stroke-width="2.5" stroke-linecap="round"/>
+                </g>
+                <!-- face base with cheek fluff -->
+                <path d="M120,44 C160,44 182,72 181,102 C181,112 178,120 172,127 L176,133 L166,132 C156,144 140,151 120,151 C100,151 84,144 74,132 L64,133 L68,127 C62,120 59,112 59,102 C58,72 80,44 120,44 Z" fill="url(#pisHead)"/>
+                <!-- tabby forehead M -->
+                <path d="M120,46 C118,58 118,66 120,74 C122,66 122,58 120,46 Z" fill="#6B533B"/>
+                <path d="M103,48 C99,58 98,66 101,75 C104,67 105,57 103,48 Z" fill="#6B533B"/>
+                <path d="M137,48 C141,58 142,66 139,75 C136,67 135,57 137,48 Z" fill="#6B533B"/>
+                <path d="M88,54 C83,62 81,69 83,76 C87,70 89,61 88,54 Z" fill="#6B533B" opacity=".8"/>
+                <path d="M152,54 C157,62 159,69 157,76 C153,70 151,61 152,54 Z" fill="#6B533B" opacity=".8"/>
+                <!-- cheek stripes -->
+                <path d="M62,100 C70,98 76,98 82,100 C76,104 69,105 62,103 Z" fill="#6B533B" opacity=".7"/>
+                <path d="M64,112 C71,110 77,110 82,112 C77,116 70,117 64,115 Z" fill="#6B533B" opacity=".55"/>
+                <path d="M178,100 C170,98 164,98 158,100 C164,104 171,105 178,103 Z" fill="#6B533B" opacity=".7"/>
+                <path d="M176,112 C169,110 163,110 158,112 C163,116 170,117 176,115 Z" fill="#6B533B" opacity=".55"/>
+                <!-- white muzzle -->
+                <ellipse cx="120" cy="122" rx="30" ry="21" fill="#F2EADC"/>
+                <!-- eyes -->
+                <g class="eyes-open">
+                  <ellipse cx="94" cy="97" rx="12.5" ry="14" fill="url(#pisEye)" stroke="#4A3826" stroke-width="1.5"/>
+                  <ellipse cx="146" cy="97" rx="12.5" ry="14" fill="url(#pisEye)" stroke="#4A3826" stroke-width="1.5"/>
+                  <ellipse cx="94" cy="98" rx="5" ry="10" fill="#241708"/>
+                  <ellipse cx="146" cy="98" rx="5" ry="10" fill="#241708"/>
+                  <circle cx="90" cy="91" r="3.2" fill="#FFF" opacity=".95"/>
+                  <circle cx="142" cy="91" r="3.2" fill="#FFF" opacity=".95"/>
+                  <circle cx="98" cy="103" r="1.6" fill="#FFF" opacity=".8"/>
+                  <circle cx="150" cy="103" r="1.6" fill="#FFF" opacity=".8"/>
+                </g>
+                <g class="eyes-happy">
+                  <path d="M82,97 Q94,86 106,97" fill="none" stroke="#4A3826" stroke-width="4" stroke-linecap="round"/>
+                  <path d="M134,97 Q146,86 158,97" fill="none" stroke="#4A3826" stroke-width="4" stroke-linecap="round"/>
+                </g>
+                <!-- blush -->
+                <g class="blush">
+                  <ellipse cx="78" cy="116" rx="9" ry="5" fill="#F08A9B"/>
+                  <ellipse cx="162" cy="116" rx="9" ry="5" fill="#F08A9B"/>
+                </g>
+                <!-- nose & mouth -->
+                <path d="M113,113 Q120,108 127,113 Q124,121 120,121 Q116,121 113,113 Z" fill="#C77F8C" stroke="#9E5F6C" stroke-width="1"/>
+                <path d="M120,121 L120,127 M120,127 Q113,134 105,130 M120,127 Q127,134 135,130" fill="none" stroke="#4A3826" stroke-width="2.2" stroke-linecap="round"/>
+                <path class="tongue" d="M115,131 Q120,140 125,131 Q120,127 115,131 Z" fill="#F08A9B"/>
+                <!-- whiskers -->
+                <g stroke="#F7F1E3" stroke-width="2" stroke-linecap="round" fill="none" opacity=".85">
+                  <path d="M84,118 Q52,112 26,102"/><path d="M84,124 Q54,124 28,122"/><path d="M86,130 Q58,136 34,142"/>
+                  <path d="M156,118 Q188,112 214,102"/><path d="M156,124 Q186,124 212,122"/><path d="M154,130 Q182,136 206,142"/>
+                </g>
+              </g>
+            </svg>
+          </button>
+          <p class="cat-name">Pistachio</p>
+          <p class="cat-owner">Moussa's cat</p>
+          <p class="pet-count"><b id="countPistachio">0</b> pets</p>
+        </div>
+
+        <!-- ============ LEO (Hanin's cream Persian) ============ -->
+        <div class="cat-card card-leo">
+          <span class="crown" id="crownLeo" hidden>👑</span>
+          <button class="cat-btn" id="petLeo" type="button" aria-label="Pet Leo">
+            <svg class="cat-svg" viewBox="0 0 240 225" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <defs>
+                <radialGradient id="leoHead" cx="50%" cy="38%" r="75%">
+                  <stop offset="0%" stop-color="#FBEBD2"/><stop offset="60%" stop-color="#F3DBB4"/><stop offset="100%" stop-color="#E3BE8C"/>
+                </radialGradient>
+                <linearGradient id="leoBody" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0%" stop-color="#F6E2BE"/><stop offset="100%" stop-color="#E2C08E"/>
+                </linearGradient>
+                <radialGradient id="leoEye" cx="45%" cy="35%" r="70%">
+                  <stop offset="0%" stop-color="#FFC968"/><stop offset="70%" stop-color="#E89B2E"/><stop offset="100%" stop-color="#A96A12"/>
+                </radialGradient>
+              </defs>
+              <!-- tail: cream plume curling front left -->
+              <g class="tail">
+                <path d="M54,220 C16,204 4,158 26,132 C38,118 56,124 54,138 C52,151 36,156 38,172 C40,190 58,202 76,208 Z" fill="#EFD4A6"/>
+                <path d="M30,150 C28,160 30,170 35,178 L47,168 C42,162 38,155 38,148 Z" fill="#FBEFDA" opacity=".7"/>
+              </g>
+              <!-- body -->
+              <path d="M34,225 C33,174 62,146 120,146 C178,146 207,174 206,225 Z" fill="url(#leoBody)"/>
+              <!-- big fluffy ruff -->
+              <path d="M120,148 C98,148 82,160 80,182 L88,177 L91,196 L100,186 L107,204 L114,192 L120,206 L126,192 L133,204 L140,186 L149,196 L152,177 L160,182 C158,160 142,148 120,148 Z" fill="#FBF0DC"/>
+              <!-- head -->
+              <g class="head">
+                <!-- ears: small, set wide (Persian) -->
+                <g class="ear ear-l">
+                  <path d="M62,72 C50,58 44,40 48,28 C50,23 55,23 59,27 L92,56 Z" fill="#E8C795"/>
+                  <path d="M62,62 C56,52 54,42 57,34 L80,54 Z" fill="#F2B8C0"/>
+                </g>
+                <g class="ear ear-r">
+                  <path d="M178,72 C190,58 196,40 192,28 C190,23 185,23 181,27 L148,56 Z" fill="#E8C795"/>
+                  <path d="M178,62 C184,52 186,42 183,34 L160,54 Z" fill="#F2B8C0"/>
+                </g>
+                <!-- face: extra round with big cheek fluff -->
+                <path d="M120,42 C164,42 188,74 186,106 C185,117 181,126 174,133 L179,140 L168,138 C157,150 140,156 120,156 C100,156 83,150 72,138 L61,140 L66,133 C59,126 55,117 54,106 C52,74 76,42 120,42 Z" fill="url(#leoHead)"/>
+                <!-- soft caramel shading on crown & cheeks -->
+                <path d="M96,50 C92,58 91,64 93,70 M120,46 C119,54 119,61 120,68 M144,50 C148,58 149,64 147,70" fill="none" stroke="#DDB27C" stroke-width="2.5" stroke-linecap="round" opacity=".7"/>
+                <path d="M64,108 C70,106 75,106 80,108 M160,108 C165,106 170,106 176,108" fill="none" stroke="#DDB27C" stroke-width="2" stroke-linecap="round" opacity=".6"/>
+                <!-- eyes: big round copper -->
+                <g class="eyes-open">
+                  <circle cx="93" cy="100" r="14" fill="url(#leoEye)" stroke="#7A4E10" stroke-width="1.5"/>
+                  <circle cx="147" cy="100" r="14" fill="url(#leoEye)" stroke="#7A4E10" stroke-width="1.5"/>
+                  <circle cx="93" cy="101" r="6.5" fill="#231303"/>
+                  <circle cx="147" cy="101" r="6.5" fill="#231303"/>
+                  <circle cx="88" cy="94" r="3.6" fill="#FFF" opacity=".95"/>
+                  <circle cx="142" cy="94" r="3.6" fill="#FFF" opacity=".95"/>
+                  <circle cx="98" cy="107" r="1.8" fill="#FFF" opacity=".8"/>
+                  <circle cx="152" cy="107" r="1.8" fill="#FFF" opacity=".8"/>
+                </g>
+                <g class="eyes-happy">
+                  <path d="M80,100 Q93,88 106,100" fill="none" stroke="#5A3A10" stroke-width="4" stroke-linecap="round"/>
+                  <path d="M134,100 Q147,88 160,100" fill="none" stroke="#5A3A10" stroke-width="4" stroke-linecap="round"/>
+                </g>
+                <!-- blush -->
+                <g class="blush">
+                  <ellipse cx="76" cy="120" rx="9" ry="5" fill="#F49CAB"/>
+                  <ellipse cx="164" cy="120" rx="9" ry="5" fill="#F49CAB"/>
+                </g>
+                <!-- flat little muzzle -->
+                <ellipse cx="120" cy="126" rx="26" ry="17" fill="#FBF0DC"/>
+                <path d="M112,118 Q120,113 128,118 Q125,126 120,126 Q115,126 112,118 Z" fill="#E89AA4" stroke="#C4747F" stroke-width="1"/>
+                <path d="M120,126 L120,131 M120,131 Q113,138 105,134 M120,131 Q127,138 135,134" fill="none" stroke="#5A3A10" stroke-width="2.2" stroke-linecap="round"/>
+                <path class="tongue" d="M115,135 Q120,144 125,135 Q120,131 115,135 Z" fill="#F49CAB"/>
+                <!-- whiskers -->
+                <g stroke="#FFFDF7" stroke-width="2" stroke-linecap="round" fill="none" opacity=".9">
+                  <path d="M84,122 Q52,116 26,106"/><path d="M84,128 Q54,128 28,126"/><path d="M86,134 Q58,140 34,146"/>
+                  <path d="M156,122 Q188,116 214,106"/><path d="M156,128 Q186,128 212,126"/><path d="M154,134 Q182,140 206,146"/>
+                </g>
+              </g>
+            </svg>
+          </button>
+          <p class="cat-name">Leo</p>
+          <p class="cat-owner">Hanin's cat</p>
+          <p class="pet-count"><b id="countLeo">0</b> pets</p>
+        </div>
+      </div>
+
+      <div class="tugbar" aria-hidden="true"><span id="tugP"></span><span id="tugL"></span></div>
+      <p class="tug-caption" id="tugCaption">Tap a cat to cast your pets.</p>
+    </section>
+
     <footer class="footer">
       <p>Made with ❤️ (and far too much confetti) by Moussa, for Hanin.</p>
       <p class="footer-domain">haninandmoussa.com</p>
@@ -143,8 +327,8 @@
 
   <canvas id="confettiCanvas" aria-hidden="true"></canvas>
 
-  <script src="js/config.js?v=5"></script>
-  <script src="js/confetti.js?v=5"></script>
-  <script src="js/app.js?v=5"></script>
+  <script src="js/config.js?v=6"></script>
+  <script src="js/confetti.js?v=6"></script>
+  <script src="js/app.js?v=6"></script>
 </body>
 </html>

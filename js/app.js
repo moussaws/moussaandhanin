@@ -118,6 +118,113 @@
     $("photos").hidden = false;
   }
 
+  /* ---------- the great pet-off ---------- */
+  (function petoff() {
+    const CATS = ["pistachio", "leo"];
+    const HEARTS = {
+      pistachio: ["#4DDBB0", "#FF9EB0", "#FFF4E4"],
+      leo:       ["#FFC94D", "#FF9EB0", "#FFF4E4"],
+    };
+    const el = {
+      pistachio: { btn: $("petPistachio"), count: $("countPistachio"), crown: $("crownPistachio") },
+      leo:       { btn: $("petLeo"),       count: $("countLeo"),       crown: $("crownLeo") },
+    };
+    let counts = { pistachio: 0, leo: 0 };
+    let pending = { pistachio: 0, leo: 0 };
+    let flushTimer = null;
+    let cloud = live; // falls back to local-only if the SQL hasn't been run yet
+
+    const localLoad = () => { try { return JSON.parse(localStorage.getItem("cat_pets_local") || "null"); } catch (_) { return null; } };
+    const localSave = () => localStorage.setItem("cat_pets_local", JSON.stringify(counts));
+
+    function render() {
+      const p = counts.pistachio, l = counts.leo, total = p + l;
+      el.pistachio.count.textContent = p.toLocaleString();
+      el.leo.count.textContent = l.toLocaleString();
+      el.pistachio.crown.hidden = !(p > l);
+      el.leo.crown.hidden = !(l > p);
+      const share = total ? Math.round((p / total) * 100) : 50;
+      $("tugP").style.width = Math.max(6, Math.min(94, share)) + "%";
+      $("tugL").style.width = (100 - Math.max(6, Math.min(94, share))) + "%";
+      const cap = $("tugCaption");
+      if (!total) cap.textContent = "Tap a cat to cast your pets.";
+      else if (p === l) cap.textContent = "A perfect tie. The cats demand a recount.";
+      else if (p > l) cap.textContent = `Pistachio leads by ${(p - l).toLocaleString()} ${p - l === 1 ? "pet" : "pets"} 👑`;
+      else cap.textContent = `Leo leads by ${(l - p).toLocaleString()} ${l - p === 1 ? "pet" : "pets"} 👑`;
+    }
+
+    async function flush(cat) {
+      const n = Math.min(pending[cat], 50);
+      if (!n || !cloud) return;
+      pending[cat] -= n;
+      try {
+        const serverCount = await rpc("pet_cat", { p_cat: cat, p_count: n });
+        counts[cat] = serverCount + pending[cat];
+        render();
+      } catch (_) {
+        cloud = false;            // table missing or offline: keep counting locally
+        localSave();
+      }
+      if (pending[cat] > 0) flush(cat);
+    }
+
+    function scheduleFlush(cat) {
+      if (!cloud) { localSave(); return; }
+      if (pending[cat] >= 25) { flush(cat); return; }
+      clearTimeout(flushTimer);
+      flushTimer = setTimeout(() => CATS.forEach(flush), 1200);
+    }
+
+    function pet(cat, evt) {
+      counts[cat] += 1;
+      pending[cat] += 1;
+      render();
+      scheduleFlush(cat);
+
+      const btn = el[cat].btn;
+      btn.classList.remove("petting");
+      void btn.offsetWidth;
+      btn.classList.add("petting");
+      clearTimeout(btn._petTimer);
+      btn._petTimer = setTimeout(() => btn.classList.remove("petting"), 800);
+
+      // floating +1 near the tap
+      const card = btn.closest(".cat-card");
+      const plus = document.createElement("span");
+      plus.className = "pet-plus";
+      plus.textContent = "+1 ❤";
+      const r = card.getBoundingClientRect();
+      const x = evt && evt.clientX ? evt.clientX - r.left : r.width / 2;
+      plus.style.left = Math.max(10, Math.min(r.width - 30, x)) + "px";
+      plus.style.top = "38%";
+      card.appendChild(plus);
+      setTimeout(() => plus.remove(), 850);
+
+      if (counts[cat] % 10 === 0) Confetti.burstAt(btn, HEARTS[cat]);
+    }
+
+    el.pistachio.btn.addEventListener("click", (e) => pet("pistachio", e));
+    el.leo.btn.addEventListener("click", (e) => pet("leo", e));
+    window.addEventListener("beforeunload", () => { if (!cloud) localSave(); });
+
+    (async () => {
+      if (cloud) {
+        try {
+          const rows = await rpc("pet_counts");
+          rows.forEach((r) => { counts[r.cat] = Number(r.count); });
+        } catch (_) {
+          cloud = false;
+          const saved = localLoad();
+          if (saved) counts = saved;
+        }
+      } else {
+        const saved = localLoad();
+        if (saved) counts = saved;
+      }
+      render();
+    })();
+  })();
+
   /* ---------- live headcount ---------- */
   async function refreshCount() {
     try {

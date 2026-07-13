@@ -10,6 +10,7 @@ poll-style RSVP backed by Supabase.
 |---|---|
 | `js/config.js` | **The only file you edit.** Supabase keys + event date/time/venue/countdown. |
 | `supabase/schema.sql` | Run once in the Supabase SQL Editor (edit the secret on the last line first). |
+| `supabase/cat_pets.sql` | Run once for the Pistachio vs Leo pet-off counters (nothing to edit). |
 
 ## Setup (once)
 
