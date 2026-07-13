@@ -293,6 +293,8 @@ h1, h2, .ticket-names { font-family: "Shrikhand", "Nunito", cursive; font-weight
   text-transform: uppercase; color: #8a7bab;
 }
 .ticket-facts dd { font-weight: 800; font-size: 1.02rem; }
+.venue-link { color: var(--coral); text-decoration: underline; text-underline-offset: 2px; }
+.venue-link:hover { color: var(--night); }
 
 .ticket-stub {
   flex: 0 0 128px;

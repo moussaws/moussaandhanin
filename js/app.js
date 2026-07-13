@@ -79,8 +79,20 @@
   const tba = "To be announced";
   $("factDate").textContent = cfg.EVENT.date || tba + " ✨";
   $("factTime").textContent = cfg.EVENT.time || tba;
-  $("factVenue").textContent = cfg.EVENT.venue || tba;
   $("factDress").textContent = cfg.EVENT.dress || "Come as you are";
+
+  if (cfg.EVENT.venue && cfg.EVENT.venueUrl) {
+    const a = document.createElement("a");
+    a.href = cfg.EVENT.venueUrl;
+    a.target = "_blank";
+    a.rel = "noopener";
+    a.className = "venue-link";
+    a.textContent = cfg.EVENT.venue + " ↗";
+    $("factVenue").textContent = "";
+    $("factVenue").appendChild(a);
+  } else {
+    $("factVenue").textContent = cfg.EVENT.venue || tba;
+  }
 
   /* ---------- countdown ---------- */
   if (cfg.EVENT.countdownTo) {

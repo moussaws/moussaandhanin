@@ -9,11 +9,13 @@ window.CONFIG = {
 
   // --- Event details (shown on the ticket) ---
   EVENT: {
-    date: "",                       // e.g. "Friday, Sept 4, 2026" — empty = "To be announced ✨"
-    time: "",                       // e.g. "7:00 PM"
-    venue: "",                      // e.g. "Nile Terrace, Cairo"
-    dress: "Bring your best smile", // dress code line
-    countdownTo: "",                // ISO date-time for the countdown, e.g. "2026-09-04T19:00:00+02:00"
-                                    // empty = countdown hidden
+    date: "Saturday, July 25, 2026", // shown on the ticket; empty = "To be announced"
+    time: "",                        // e.g. "7:00 PM" — still to decide
+    venue: "",                       // e.g. "Nile Terrace, Cairo" — still to decide
+    venueUrl: "",                    // Google Maps link; makes the venue a clickable "Open in Maps"
+    dress: "Bring your best smile",  // dress code line
+    // Countdown target. Time is a placeholder until you decide the hour;
+    // the day number is correct regardless. (+03:00 = Egypt summer time.)
+    countdownTo: "2026-07-25T19:00:00+03:00",
   },
 };
