@@ -1,4 +1,4 @@
-# moussaandhanin.com — Engagement invitation site (approved design)
+# haninandmoussa.com — Engagement invitation site (approved design)
 
 Date: 2026-07-13. Approved by Moussa in-session.
 
@@ -11,7 +11,7 @@ placeholders edited in one obvious config block.
 ## Stack (Option A — approved)
 - Pure static HTML/CSS/JS, no framework, no build step, no external CDNs.
 - Supabase (NEW dedicated free project, separate from Athletiq) stores RSVPs.
-- Deployed on GitHub Pages (public repo) behind moussaandhanin.com.
+- Deployed on GitHub Pages (public repo) behind haninandmoussa.com.
 - Domain purchased by Moussa at a registrar; DNS steps provided at the end.
 
 ## Experience

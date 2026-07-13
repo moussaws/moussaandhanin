@@ -1,4 +1,4 @@
-# moussaandhanin.com 💍
+# haninandmoussa.com 💍
 
 The engagement invitation site for Moussa & Hanin — a night-funfair themed
 single page with a ring-box opening, confetti, a ticket card, and a
@@ -30,7 +30,7 @@ answers only save in each visitor's own browser.
 
 ## Deploy
 
-GitHub Pages serves `main` at moussaandhanin.com (see `CNAME`).
+GitHub Pages serves `main` at haninandmoussa.com (see `CNAME`).
 DNS at your registrar:
 
 ```
