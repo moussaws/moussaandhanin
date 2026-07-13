@@ -18,4 +18,12 @@ window.CONFIG = {
     // the day number is correct regardless. (+03:00 = Egypt summer time.)
     countdownTo: "2026-07-25T19:00:00+03:00",
   },
+
+  // --- Shared photo album ---
+  // Paste your iCloud Shared Album link (looks like
+  // "https://www.icloud.com/sharedalbum/#B0Abc...") to show the photo section.
+  // Empty = the section stays hidden.
+  PHOTOS: {
+    albumUrl: "",
+  },
 };

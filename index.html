@@ -11,7 +11,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Shrikhand&family=Nunito:ital,wght@0,400;0,700;0,800;0,900;1,400&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css?v=2">
+  <link rel="stylesheet" href="css/style.css?v=3">
 </head>
 <body>
 
@@ -124,6 +124,17 @@
       <p class="rsvp-error" id="rsvpError" role="alert" hidden></p>
     </section>
 
+    <!-- Shared photo album (hidden until an album link is set in config.js) -->
+    <section class="photos" id="photos" hidden aria-labelledby="photosTitle">
+      <h2 class="section-title" id="photosTitle">Bring your camera 📸</h2>
+      <div class="photos-card">
+        <p class="photos-emoji" aria-hidden="true">📸 💍 ✨</p>
+        <p class="photos-lead">Every candid, every happy tear, every terrible dance move. Drop your photos from the day into our shared album so we can relive the whole thing together.</p>
+        <a class="btn btn-gold" id="photosBtn" href="#" target="_blank" rel="noopener">Add your photos</a>
+        <p class="photos-note">On your iPhone, tap to join our album and add your shots. On another phone? You can still browse the memories.</p>
+      </div>
+    </section>
+
     <footer class="footer">
       <p>Made with ❤️ (and far too much confetti) by Moussa, for Hanin.</p>
       <p class="footer-domain">haninandmoussa.com</p>
@@ -132,8 +143,8 @@
 
   <canvas id="confettiCanvas" aria-hidden="true"></canvas>
 
-  <script src="js/config.js?v=2"></script>
-  <script src="js/confetti.js?v=2"></script>
-  <script src="js/app.js?v=2"></script>
+  <script src="js/config.js?v=3"></script>
+  <script src="js/confetti.js?v=3"></script>
+  <script src="js/app.js?v=3"></script>
 </body>
 </html>

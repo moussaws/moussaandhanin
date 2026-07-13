@@ -112,6 +112,12 @@
     }
   }
 
+  /* ---------- shared photo album ---------- */
+  if (cfg.PHOTOS && cfg.PHOTOS.albumUrl) {
+    $("photosBtn").href = cfg.PHOTOS.albumUrl;
+    $("photos").hidden = false;
+  }
+
   /* ---------- live headcount ---------- */
   async function refreshCount() {
     try {
